@@ -44,7 +44,7 @@ cd $RUTA_WEB/$1/
 
 #Ejecutamos instalación de Drupal con composer
 echo "Desplegando Drupal 10 utilizando composer..."
-sudo -u $USER_WEB composer install
+sudo -u $USER_WEB composer install --no-cache --ignore-platform-reqs
 
 #Creamos una base de datos para el sitio web
 echo "Creando base de datos para el sitio web..."

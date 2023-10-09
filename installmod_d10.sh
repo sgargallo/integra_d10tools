@@ -33,7 +33,7 @@ cd $RUTA_WEB/$1/
 
 #Clonamos imagen base desde repositorio
 echo "Instalando módulo..."
-sudo -u $USER_WEB composer require drupal/$2
+sudo -u $USER_WEB composer require drupal/$2 --no-cache --ignore-platform-reqs
 
 #Fin del proceso
 echo "Proceso finalizado"
