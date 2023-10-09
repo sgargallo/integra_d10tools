@@ -41,6 +41,7 @@ mkdir $RUTA_TEMP
 #Creamos la estructura necesaria de carpetas para alojar el volcado
 echo "Creando estructura de carpetas..."
 mkdir $RUTA_TEMP/web
+mkdir $RUTA_TEMP/web/libraries
 mkdir $RUTA_TEMP/web/modules
 mkdir $RUTA_TEMP/web/sites
 mkdir $RUTA_TEMP/web/sites/default
@@ -50,6 +51,7 @@ mkdir $RUTA_TEMP/web/themes
 echo "Copiando archivos y carpetas del sitio web a la ruta temporal..."
 cp $RUTA_WEB/$1/composer.json $RUTA_TEMP/web
 cp $RUTA_WEB/$1/composer.lock $RUTA_TEMP/web
+cp -r $RUTA_WEB/$1/libraries $RUTA_TEMP/web
 cp -r $RUTA_WEB/$1/modules/custom $RUTA_TEMP/web/modules
 cp -r $RUTA_WEB/$1/profiles $RUTA_TEMP/web
 cp -r $RUTA_WEB/$1/sites/default/files $RUTA_TEMP/web/sites/default/
